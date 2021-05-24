@@ -73,10 +73,23 @@
                 margin: 0 10px;
                 background-color: #ccc;
             }
+            .bow-arrow img {
+                width: 150px;
+            }
+
+            @media (min-width: 992px) {
+                .bow-arrow img {
+                    width: auto;
+                }
+            }
             @media (max-width: 576px) {
                 .about-us .item {
                     display: block !important;
                     text-align: center;
+                }
+                .divider::before,
+                .divider::after {
+                    width: 100px;
                 }
             }
 
@@ -131,7 +144,7 @@
                                 align-items-center
                             "
                         >
-                            <div class="img-fluid mr-5">
+                            <div class="img-fluid mr-md-5">
                                 <img
                                     src="./new-imgs/information-point.png"
                                     alt="information-point"
@@ -158,7 +171,7 @@
                                 align-items-center
                             "
                         >
-                            <div class="img-fluid mr-5">
+                            <div class="img-fluid mr-md-5">
                                 <img
                                     src="./new-imgs/binoculars.png"
                                     alt="information-point"
@@ -201,7 +214,7 @@
                         <div
                             class="
                                 item
-                                col-4
+                                col-4 col-sm-2
                                 d-flex
                                 justify-content-center
                                 align-items-center
@@ -218,8 +231,19 @@
                         </div>
                         <div
                             class="
+                                bow-arrow
+                                col-sm-1
+                                d-none d-sm-flex
+                                justify-content-center
+                                align-items-center
+                            "
+                        >
+                            <img src="./new-imgs/bow-arrow-up.png" alt="" />
+                        </div>
+                        <div
+                            class="
                                 item
-                                col-4
+                                col-4 col-sm-2
                                 d-flex
                                 justify-content-center
                                 align-items-center
@@ -236,8 +260,19 @@
                         </div>
                         <div
                             class="
+                                bow-arrow
+                                col-sm-1
+                                d-none d-sm-flex
+                                justify-content-center
+                                align-items-center
+                            "
+                        >
+                            <img src="./new-imgs/bow-arrow-down.png" alt="" />
+                        </div>
+                        <div
+                            class="
                                 item
-                                col-12 col-sm-4
+                                col-12 col-sm-2
                                 d-flex
                                 justify-content-center
                                 align-items-center
