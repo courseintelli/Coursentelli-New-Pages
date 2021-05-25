@@ -25,7 +25,7 @@
             body {
                 position: relative;
                 overflow-x: hidden;
-                background: linear-gradient(rgba(17, 36, 89, 0.04.), white);
+                background: linear-gradient(rgba(17, 36, 89, 0.04), white);
             }
 
             .top-elipse {
@@ -129,6 +129,23 @@
                 }
             }
 
+            /*what-you-can-do */
+            .what-you-can-do img.arrow-vertical {
+                position: absolute;
+                height: 227px;
+                display: none;
+            }
+
+            .what-you-can-do img.arrow-vertical.arrow-right {
+                right: 15px;
+                bottom: 281px;
+            }
+
+            .what-you-can-do img.arrow-vertical.arrow-left {
+                left: 15px;
+                top: 207px;
+            }
+
             .what-you-can-do .items .item {
                 flex-wrap: wrap;
                 border: 1px solid rgba(17, 36, 89, 0.16);
@@ -139,6 +156,20 @@
             .what-you-can-do .items .item h6 {
                 width: 100%;
                 margin-top: 20px;
+            }
+
+            @media (max-width: 576px) {
+                .what-you-can-do img.arrow-vertical {
+                    display: block;
+                }
+
+                .what-you-can-do .items .wrapper {
+                    margin-bottom: 100px;
+                }
+
+                .what-you-can-do .items .item {
+                    padding: 30px 0 !important;
+                }
             }
 
             /* start qoute*/
@@ -160,6 +191,14 @@
 
             .qoute .container {
                 height: 570px;
+            }
+
+            .qoute .img .small-qoute {
+                position: absolute;
+                top: -94px;
+                left: -8px;
+                width: 110px;
+
             }
 
             .qoute .qoutes-image {
@@ -235,19 +274,24 @@
             </div>
         </section>
         <section class="what-you-can-do">
-            <div class="text-center mb-5">
-                <h1>حوِّل ما يمكنك القيام به الى واقع تستفيد منه</h1>
-                <p>
-                    نركز خلال رحلتك على اكتسابك أحدث المعلومات والممارسات
-                    العملية وفق الأنظمة والمعايير الخاصة بنا وبشركائنا، وابدأ
-                    الان
-                </p>
-                <div class="divider"></div>
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h1>حوِّل ما يمكنك القيام به الى واقع تستفيد منه</h1>
+                    <p>
+                        نركز خلال رحلتك على اكتسابك أحدث المعلومات والممارسات
+                        العملية وفق الأنظمة والمعايير الخاصة بنا وبشركائنا، وابدأ
+                        الان
+                    </p>
+                    <div class="divider"></div>
+                </div>
+
             </div>
             <div class="items text-center">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="mt-3 col-6 col-sm-3">
+                <div class="container position-relative">
+                    <img src="./new-imgs/bow-arrow-vertical-right.png" alt="arrow" class="arrow-vertical arrow-right">
+                    <img src="./new-imgs/bow-arrow-vertical-left.png" alt="arrow" class="arrow-vertical arrow-left">
+                    <div class="row justify-content-sm-between justify-content-center">
+                        <div class="wrapper mt-4 col-8 col-sm-3">
                             <div class="p-2 item d-flex align-items-center justify-content-center">
                                 <div class="img text-center">
                                     <img src="./new-imgs/elearning.png" alt="learn" class="img-fluid" />
@@ -266,7 +310,7 @@
                             ">
                             <img src="./new-imgs/bow-arrow-up.png" alt="" />
                         </div>
-                        <div class="mt-3 col-6 col-sm-3 ">
+                        <div class=" wrapper mt-4 col-8 col-sm-3 ">
                             <div class="p-2 item d-flex align-items-center justify-content-center">
                                 <div class="img text-center">
                                     <img src="./new-imgs/video-player.png" alt="learn" class="img-fluid" />
@@ -284,10 +328,10 @@
                             ">
                             <img src="./new-imgs/bow-arrow-down.png" alt="" />
                         </div>
-                        <div class="mt-3 col-6 col-sm-3 offset-3 offset-sm-0">
+                        <div class="wrapper mt-4 col-8 col-sm-3 ">
                             <div class=" p-2 item d-flex align-items-center justify-content-center">
                                 <div class="img text-center">
-                                    <img src="./new-imgs/information-point.png" alt="learn" class="img-fluid" />
+                                    <img src="./new-imgs/practice.png" alt="learn" class="img-fluid" />
                                 </div>
                                 <h6>طبق</h6>
                             </div>
@@ -299,22 +343,25 @@
         <section class="qoute">
             <div class="overlay"></div>
             <div class="container">
-                <div class="row h-100 justify-content-between align-items-center">
-                    <div class="col-md-8 col-8 d-flex">
+                <div
+                    class="row h-100 text-center text-md-left justify-content-center justify-content-md-between align-items-center">
+                    <div class="col-md-8 col-10 d-flex">
                         <span class="vertical-divider mr-4"></span>
                         <div>
-                            <div class="img">
+                            <div class="img position-relative">
                                 <img class="img-fluid" src="./new-imgs/overlay-logo.png" alt="overlay logo" />
-                                <p class="lead">
+                                <p class="lead mt-4">
                                     التدريب في كورسنتلي يحوِّل من طريقة تفكيرك
                                     حول ما يمكنك القيام به ويُترجم مباشرة إلى
                                     العالم الحقيقي، طبِّق إمكانياتك الجديدة الان
                                     في سوق العمل
                                 </p>
+                                <img class="img-fluid small-qoute d-md-none" src="./new-imgs/fi-rr-quote-right.png"
+                                    alt="qoute" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-3 qoutes-image">
+                    <div class="col-md-4 col-12 qoutes-image d-none d-md-block">
                         <div>
                             <img src="./new-imgs/fi-rr-quote-right.png" alt="qoute" class="img-fluid" />
                         </div>
