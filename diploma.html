@@ -21,6 +21,12 @@
                 font-family: 'Cairo', sans-serif;
             }
 
+            @media (min-width: 1400px) {
+                .container {
+                    max-width: 1320px;
+                }
+            }
+
             html,
             body {
                 position: relative;
@@ -51,6 +57,7 @@
             .h1 {
                 font-size: 30px;
                 margin-bottom: 20px;
+                font-weight: bold;
             }
 
             p.lead {
@@ -87,7 +94,7 @@
                 width: 1px;
                 margin: 0 10px;
                 opacity: 50%;
-                background-color: #263069;
+                background-color: rgba(17, 36, 89, 0.3);
             }
 
             @media (min-width:576px) {
@@ -125,8 +132,14 @@
             .video .rating .streaming {
                 background: #FB2F2F;
                 border-radius: 6px;
-                padding: 7px;
+                padding: 7px 0;
                 color: white;
+                width: 127px;
+                text-align: center;
+            }
+
+            .video .rating .streaming span {
+                margin-left: 6px;
             }
 
             .video .vertical-divider {
@@ -215,12 +228,19 @@
                 width: 200px;
                 border-radius: 6px;
                 color: white;
+                transition: background-color 0.5s ease;
             }
 
             .invest .buttons button.register,
             .video .available-sessions .buttons button.register {
                 border: 1px solid #112459;
                 color: #112459;
+            }
+
+            .invest .buttons button.register:hover,
+            .video .available-sessions .buttons button.register:hover {
+                background: #112459;
+                color: white;
             }
 
             .invest .buttons button.whats-app,
@@ -243,6 +263,11 @@
 
             .video .reviews .socials a:hover {
                 text-decoration: none;
+            }
+
+            .video .reviews .vertical-divider {
+                height: auto;
+                background: rgba(17, 36, 89, 0.3);
             }
 
             .video .reviews .person .img .person-img {
@@ -329,6 +354,8 @@
                 transition: all 1s ease;
                 padding: 30px;
                 height: 100%;
+                border: 1px solid rgba(17, 36, 89, 0.06);
+                line-height: 1.9;
             }
 
             .advantages .item:hover {
@@ -336,10 +363,22 @@
                 color: white;
             }
 
+            /* start used tools */
+            .used-tools .wrapper {
+                border: 1px solid rgba(17, 36, 89, 0.06);
+                padding: 45px;
+                border-radius: 6px;
+                height: 100%;
+            }
+
             /* future work section */
             .future-work .countries .item span {
                 color: #42B39A;
                 font-weight: bold;
+            }
+
+            .future-work .countries h6 {
+                font-size: 14px;
             }
 
             .future-work .qoute p {
@@ -364,18 +403,35 @@
                 .trophy .rewards .img {
                     height: auto;
                 }
+
+                .qoute img {
+                    width: 30px;
+                }
             }
 
             /* start trainers work */
             .trainers-work .video-player {
-                height: 400px;
-                max-width: 650px;
+                height: 580px;
+                max-width: 1044px;
+            }
+
+            @media (max-width:776px) {
+                .trainers-work .video-player {
+                    height: 400px;
+                    max-width: 650px;
+                }
             }
 
             /* start certifications   */
             .certifications .carousel .links {
                 box-shadow: 0px 2px 0px 0px #E1E1E1;
                 position: relative;
+                margin: auto;
+                width: 42%;
+            }
+
+            .certifications .carousel .links ul {
+                width: 100%;
             }
 
             .certifications .carousel .links li {
@@ -385,6 +441,8 @@
                 cursor: pointer;
                 transition: all 1s ease;
                 border-bottom: 3px solid transparent;
+                flex-grow: 1;
+                font-size: 12px;
             }
 
             .certifications .carousel .links li.active {
@@ -410,9 +468,28 @@
             }
 
             @media (min-width: 768px) {
+                .certifications .carousel .links li {
+                    font-size: 15px;
+                }
+
                 .certifications .carousel .links li.active {
                     border-color: transparent;
                 }
+            }
+
+            /* start invest */
+            .invest .buttons button {
+                width: 165px;
+                margin-left: 20px;
+            }
+
+            .invest .text .wrapper span {
+                color: #42B39A;
+                font-size: 30px;
+            }
+
+            .invest .text .wrapper span strong {
+                margin-left: 5px;
             }
 
             /* common question */
@@ -460,23 +537,14 @@
                 margin-top: 14px;
             }
 
-            /* start invest */
-            .invest .buttons button {
-                width: 165px;
-            }
-
-            .invest .text .wrapper span {
-                color: #42B39A;
-                font-size: 20px;
-            }
-
-            .invest .text .wrapper span strong {
-                margin-left: 5px;
-            }
-
             @media (max-width:767px) {
                 .invest .buttons button {
                     width: 100%;
+                }
+
+                .common-questions .question h6,
+                .common-questions .question {
+                    font-size: 12px;
                 }
             }
         </style>
@@ -491,15 +559,15 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6 order-1 order-lg-0  mt-5 mt-lg-0">
-                        <div class="heading d-flex justify-content-between">
+                        <div class="heading d-none d-lg-flex justify-content-between">
                             <div>
                                 <h1>دبلوم احتراف الموشن جرافيك <br /> Professional Diploma of Motion Graphics</h1>
                             </div>
                             <div>
-                                <img src="./new-imgs/bag.png" alt="bag">
+                                <a href="#"><img src="./new-imgs/bag.png" alt="bag"></a>
                             </div>
                         </div>
-                        <div class="rating d-flex align-items-center">
+                        <div class="rating d-none d-lg-flex align-items-center">
                             <strong>4.5</strong>
                             <img class="mx-2" src="./new-imgs/star.png" alt="start">
                             <small>(255تقييم)</small>
@@ -508,7 +576,7 @@
                                 <img src="./new-imgs/streaming.png" alt="steaming">
                             </div>
                         </div>
-                        <div class="details mt-4">
+                        <div class="details d-lg-block d-none mt-4">
                             <div class="row">
                                 <div class="col-12 col-sm-6 col-md-3 mt-4 text-center">
                                     <div class="wrapper">
@@ -537,14 +605,14 @@
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-3 mt-4 text-center">
                                     <div class="wrapper">
-                                        <img src="./new-imgs/fi-rr-time-oclock.png" alt="crown">
+                                        <img src="./new-imgs/fi-rr-calendar.png" alt="crown">
                                         <h6>تاريج بداية الدبلومة</h6>
                                         <p>12/5/2021</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p>
+                        <p class="d-none d-lg-block">
                             يهدف دبلوم احتراف الموشن جرافيك الى اعداد مصممين ذو كفاءة وخبرة تساعدهم في رفع مستواهم
                             المهني
                             واكتساب مهارات جديدة تؤهلهم لسوق العمل بدلا من دراسة الدورات المتجزئة سوف تدرس منهج متكامل
@@ -553,7 +621,7 @@
                             رسم
                             الشخصيات الكرتونية بالإضافة الى تطبيق عملي لعدد من المشاريع و التصميمات المختلفة
                         </p>
-                        <div class="pt-5 available-sessions position-relative">
+                        <div class="pt-5 d-none d-lg-block available-sessions position-relative">
                             <div class="wrapper">
                                 <h5>الجلسات المتاحة</h5>
                                 <form action="POST">
@@ -592,11 +660,110 @@
                         </div>
                     </div>
                     <div class="col-12 col-lg-6">
+                        <div class="heading d-flex d-lg-none justify-content-between">
+                            <div>
+                                <h1>دبلوم احتراف الموشن جرافيك <br /> Professional Diploma of Motion Graphics</h1>
+                            </div>
+                            <div>
+                                <a href="#"><img src="./new-imgs/bag.png" alt="bag"></a>
+                            </div>
+                        </div>
+                        <div class="rating  d-flex d-lg-none align-items-center  mb-3 mb-lg-0">
+                            <strong>4.5</strong>
+                            <img class="mx-2" src="./new-imgs/star.png" alt="start">
+                            <small>(255تقييم)</small>
+                            <div class="streaming ml-3">
+                                <span>بث مباشر</span>
+                                <img src="./new-imgs/streaming.png" alt="steaming">
+                            </div>
+                        </div>
                         <div class="video-player">
                             <iframe style="border-radius: 12px; height: 421px; width: 100%;"
                                 src="https://www.youtube.com/embed/o4X7F8-ZHuk?start=26" frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                        <div class="details d-block d-lg-none mt-4">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-3 mt-4 text-center">
+                                    <div class="wrapper">
+                                        <img src="./new-imgs/fi-rr-crown.png" alt="crown">
+                                        <h6>المستوي</h6>
+                                        <p>جميع المستويات</p>
+                                        <span class="vertical-divider mr-4"></span>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3  mt-4 text-center">
+                                    <div class="wrapper">
+                                        <img src="./new-imgs/fi-rr-globe.png" alt="crown">
+                                        <h6>لغة الدبلومة</h6>
+                                        <p>اللغة العربية</p>
+                                        <span class="vertical-divider mr-4 d-sm-none d-md-block"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3 mt-4 text-center">
+                                    <div class="wrapper">
+                                        <img src="./new-imgs/fi-rr-time-oclock.png" alt="crown">
+                                        <h6>مدة الدبلومة</h6>
+                                        <p>90 ساعة تدريبية</p>
+                                        <span class="vertical-divider mr-4"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6 col-md-3 mt-4 text-center">
+                                    <div class="wrapper">
+                                        <img src="./new-imgs/fi-rr-calendar.png" alt="crown">
+                                        <h6>تاريج بداية الدبلومة</h6>
+                                        <p>12/5/2021</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="d-block d-lg-none">
+                            يهدف دبلوم احتراف الموشن جرافيك الى اعداد مصممين ذو كفاءة وخبرة تساعدهم في رفع مستواهم
+                            المهني
+                            واكتساب مهارات جديدة تؤهلهم لسوق العمل بدلا من دراسة الدورات المتجزئة سوف تدرس منهج متكامل
+                            منظم
+                            ومتقن يحتوي على جميع المعلومات والأسرار التي تجعلك قادراَ على تصميم و بناء وتحريك المشاهد و
+                            رسم
+                            الشخصيات الكرتونية بالإضافة الى تطبيق عملي لعدد من المشاريع و التصميمات المختلفة
+                        </p>
+                        <div class="pt-5 d-block d-lg-none available-sessions position-relative">
+                            <div class="wrapper">
+                                <h5>الجلسات المتاحة</h5>
+                                <form action="POST">
+                                    <div class="d-flex ">
+                                        <label for="option-1" class="option">
+                                            <input type="radio" name="sessions" id="option-1" class="option-input"
+                                                checked>
+                                            <div class="dot"></div>
+                                            <div>
+                                                <p>تبدا في 29 ابريل</p>
+                                                <p>تنتهي في 20 أغسطس</p>
+
+                                            </div>
+                                        </label>
+
+                                        <label for="option-2" class="option">
+                                            <input type="radio" name="sessions" id="option-2" class="option-input">
+                                            <div class="dot"></div>
+                                            <div>
+                                                <p>تبدا في 29 ابريل</p>
+                                                <p>تنتهي في 20 أغسطس</p>
+
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="mt-4 d-flex justify-content-between buttons ">
+                                        <button class="btn register"> سجل الآن</button>
+                                        <button class="btn whats-app"> واتس اب</button>
+                                        <button class="btn download"> تنزيل دليل الدبلوم
+                                            <img class="ml-2" src="./new-imgs/fi-sr-download.png" alt="download">
+                                        </button>
+
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                         <div class="reviews d-flex justify-content-between">
                             <div class="person mt-3">
@@ -617,7 +784,7 @@
                                     مستواهم المهني واكتساب مهارات جديدة
                                     تؤهلهم لسوق العمل بدلا من دراسة الدورات المتجزئة
                                 </p>
-                                <div class="socials text-center text-md-left mx-3 mx-md-5 ">
+                                <div class="socials text-center text-md-left mx-3 mx-md-0 ">
                                     <a href="#" class="mr-3">
                                         <i class="fab fa-instagram"></i>
                                     </a>
@@ -626,6 +793,7 @@
                                     </a>
                                 </div>
                             </div>
+                            <span class="vertical-divider"></span>
                             <div class="person mt-3">
                                 <div class=" wrapper d-flex justify-content-center">
                                     <div class="img mr-0 mr-md-3 mb-3 mb-md-0 mt-md-0 mt-4"><img class="person-img"
@@ -644,7 +812,7 @@
                                     مستواهم المهني واكتساب مهارات جديدة
                                     تؤهلهم لسوق العمل بدلا من دراسة الدورات المتجزئة
                                 </p>
-                                <div class="socials text-center text-md-left mx-3 mx-md-5 ">
+                                <div class="socials text-center text-md-left mx-3 mx-md-0 ">
                                     <a href="#" class="mr-3">
                                         <i class="fab fa-instagram"></i>
                                     </a>
@@ -718,24 +886,31 @@
                 <div class="divider"></div>
             </div>
             <div class="container">
-                <div class="row">
-                    <div class="col mt-4 mt-sm-0">
-                        <div class="item">
-                            <img src="./new-imgs/after-effects.png" alt="after-effects">
+                <div class="row justify-content-center">
+                    <div class="col-6 col-lg-3 mt-4 mt-sm-0">
+                        <div class="wrapper">
+                            <div class="item">
+                                <img class="img-fluid" src="./new-imgs/after-effects.png" alt="after-effects">
+                            </div>
+                            <span class="my-2 d-inline-block font-weight-bold">After effects</span>
                         </div>
-                        <span class="my-2 d-inline-block font-weight-bold">After effects</span>
                     </div>
-                    <div class="col mt-4 mt-sm-0">
-                        <div class="item">
-                            <img src="./new-imgs/Adobe_Media_Encoder_Icon.png" alt="Adobe_Media_Encoder_Icon">
+                    <div class="col-6 col-lg-3 mt-4 mt-sm-0">
+                        <div class="wrapper">
+                            <div class="item">
+                                <img class="img-fluid" src="./new-imgs/Adobe_Media_Encoder_Icon.png"
+                                    alt="Adobe_Media_Encoder_Icon">
+                            </div>
+                            <span class="my-2 d-inline-block  font-weight-bold">Adobe media encoder</span>
                         </div>
-                        <span class="my-2 d-inline-block  font-weight-bold">Adobe media encoder</span>
                     </div>
-                    <div class="col mt-4 mt-sm-0">
-                        <div class="item">
-                            <img src="./new-imgs/illustrator.png" alt="illustrator">
+                    <div class="col-6 col-lg-3  mt-4 mt-lg-0">
+                        <div class="wrapper">
+                            <div class="item">
+                                <img class="img-fluid" src="./new-imgs/illustrator.png" alt="illustrator">
+                            </div>
+                            <span class="my-2 d-inline-block  font-weight-bold">Illustrator</span>
                         </div>
-                        <span class="my-2 d-inline-block  font-weight-bold">Illustrator</span>
                     </div>
                 </div>
             </div>
@@ -755,8 +930,7 @@
                 </div>
                 <div class="row countries">
                     <div class="col-md-6 col-lg-3 mt-3">
-                        <div
-                            class="item h-100 d-flex  justify-content-between  justify-content-md-start  align-items-center">
+                        <div class="item h-100 d-flex  justify-content-md-start  align-items-center">
                             <div>
                                 <img src="./new-imgs/united-states.png" alt="united-states">
                             </div>
@@ -765,8 +939,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mt-3">
-                        <div
-                            class="item h-100 d-flex  justify-content-between  justify-content-md-start  align-items-center">
+                        <div class="item h-100 d-flex justify-content-md-start  align-items-center">
                             <div>
                                 <img src="./new-imgs/united-kingdom.png" alt="united-kingdom">
                             </div>
@@ -775,8 +948,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mt-3">
-                        <div
-                            class="item h-100 d-flex  justify-content-between  justify-content-md-start align-items-center">
+                        <div class="item h-100 d-flex  justify-content-md-start align-items-center">
                             <div>
                                 <img src="./new-imgs/japan.png" alt="japan">
                             </div>
@@ -785,8 +957,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-3 mt-3">
-                        <div
-                            class="item h-100 d-flex  justify-content-between  justify-content-md-start  align-items-center">
+                        <div class="item h-100 d-flex justify-content-md-start  align-items-center">
                             <div>
                                 <img src="./new-imgs/saudi-arabia.png" alt="saudi-arabia">
                             </div>
@@ -797,17 +968,17 @@
                 </div>
                 <div class="qoute mt-5 text-center">
                     <div class="row justify-content-center">
-                        <div class="col-1 align-self-end">
-                            <img src="./new-imgs/quote-right.png" alt="qoute">
+                        <div class=" align-self-end">
+                            <img class="img-fluid" src="./new-imgs/quote-right.png" alt="qoute">
                         </div>
-                        <div class="col-6">
+                        <div class="col-9 col-lg-6">
                             <p>
                                 سيساعدك المدربين في كل خطوة تتعلمها والتأكد من وصولك الى الهدف المطلوب
                                 في كل مرحلة والحصول على إرشادات تزيد من ابداعك وتضيف الى خبرتك
                             </p>
                         </div>
-                        <div class="col-1 align-self-start">
-                            <img src="./new-imgs/quote-left.png" alt="qoute">
+                        <div class=" align-self-start">
+                            <img class="img-fluid" src="./new-imgs/quote-left.png" alt="qoute">
                         </div>
                     </div>
                 </div>
@@ -833,19 +1004,19 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-sm-6 col-lg-4 mt-4 mt-lg-0">
                         <div class="img">
-                            <img class="img-fluid" src="./new-imgs/reward1.png" alt="reward">
+                            <img class="img-fluid mh-100" src="./new-imgs/reward1.png" alt="reward">
                         </div>
                         <h6 class="mt-3">جهاز رسم لوحي + قسيمة شراء $50</h6>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4 mt-4 mt-lg-0">
                         <div class="img">
-                            <img class="img-fluid" src="./new-imgs/reward2.png" alt="reward">
+                            <img class="img-fluid mh-100" src="./new-imgs/reward2.png" alt="reward">
                         </div>
                         <h6 class="mt-3">جهاز رسم لوحي</h6>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-4 mt-4 mt-lg-0">
                         <div class="img">
-                            <img class="img-fluid" src="./new-imgs/reward3.png" alt="reward">
+                            <img class="img-fluid mh-100" src="./new-imgs/reward3.png" alt="reward">
                         </div>
                         <h6 class="mt-3">قسيمة شراء $50</h6>
                     </div>
@@ -904,17 +1075,17 @@
             </div>
             <div class="container">
                 <div class="carousel">
-                    <div class="links w-100 text-center">
+                    <div class="links d-block d-lg-flex text-center">
                         <div class="sliding-line d-none d-md-block"></div>
-                        <ul class="d-flex justify-content-center p-0">
+                        <ul class="d-flex justify-content-center  p-0">
                             <li data-target="#carousel" data-slide-to="0" class="active">
-                                <div>
+                                <div class="mb-2">
                                     <img src="./new-imgs/coursentelli-certifi.png" alt="coursentelli-certificate">
                                 </div>
                                 شهادة كورسنتلي
                             </li>
                             <li data-target="#carousel" data-slide-to="1">
-                                <div>
+                                <div class="mb-2">
                                     <img src="./new-imgs/ukuni.png" alt="united kingdom university">
                                 </div>
                                 UK INTERNATIONAL ACADEMY
@@ -927,7 +1098,7 @@
                                 <div class="col-12 col-lg-7">
                                     <img class="img-fluid" src="./new-imgs/شهادة كورسنتلى.png" alt="شهادة">
                                 </div>
-                                <div class="col-12 col-lg d-flex align-items-center">
+                                <div class="col-12 col-lg d-flex align-items-center text-center text-lg-left">
                                     <p>
                                         سيتمكن المتدرب من الحصول على الشهادة الخاصة بمنصة كورسنتلي والتي
                                         تقدم للمتدربين المشاركين بالبرامج التعليمية الخاصة بها والتي تثبت للمتدرب
@@ -941,7 +1112,7 @@
                                 <div class="col-12 col-lg-7">
                                     <img class="img-fluid" src="./new-imgs/شهادة كورسنتلى.png" alt="شهادة">
                                 </div>
-                                <div class="col-12 col-lg d-flex align-items-center">
+                                <div class="col-12 col-lg d-flex align-items-center  text-center text-lg-left">
                                     <p>
                                         سيتمكن المتدرب من الحصول على الشهادة الخاصة بمنصة كورسنتلي والتي
                                         تقدم للمتدربين المشاركين بالبرامج التعليمية الخاصة بها والتي تثبت للمتدرب
@@ -955,6 +1126,36 @@
 
             </div>
 
+        </section>
+        <section class="invest pb-5">
+            <div class="container">
+                <div class="row justify-content-between text-center">
+                    <div class="col-12 col-lg-4 order-1 order-lg-0">
+                        <div>
+                            <img src="./new-imgs/about.png" alt="coursentelli" class="img-fluid ">
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block">
+                        <div class="m-auto vertical-divider h-100"></div>
+                    </div>
+                    <div class="col-12 col-lg-7 d-flex align-items-center  mb-5 mb-lg-0 text-center text ">
+                        <div class="wrapper w-100 ">
+                            <div class="div ">
+                                <h3 class="mb-3">استثمر في نفسك</h3>
+                                <span class="mr-5 "><strong>1850</strong>ريال سعودي</span>
+                                <span><strong>495</strong>دولار</span>
+                            </div>
+                            <div class=" mt-4 d-inline-flex justify-content-around buttons ">
+                                <button class="btn register"> سجل الآن</button>
+                                <button class="btn whats-app"> واتس اب</button>
+                                <button class="btn download"> تنزيل دليل الدبلوم
+                                    <img class="ml-2" src="./new-imgs/fi-sr-download.png" alt="download">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="common-questions">
             <div class="text-center mb-5">
@@ -1028,33 +1229,6 @@
             </div>
 
         </section>
-        <section class="invest pb-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-4 text-center text-lg-left order-1 order-lg-0">
-                        <div>
-                            <img src="./new-imgs/about.png" alt="coursentelli" class="img-fluid ">
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-8 d-flex align-items-center  mb-5 mb-lg-0 text-center text ">
-                        <div class="wrapper w-100 ">
-                            <div class="div">
-                                <h3 class="mb-3">استثمر في نفسك</h3>
-                                <span class="mr-5"><strong>1800</strong>ريال سعودي</span>
-                                <span><strong>495</strong>دولار</span>
-                            </div>
-                            <div class=" mt-4 d-flex justify-content-around buttons ">
-                                <button class="btn register"> سجل الآن</button>
-                                <button class="btn whats-app"> واتس اب</button>
-                                <button class="btn download"> تنزيل دليل الدبلوم
-                                    <img class="ml-2" src="./new-imgs/fi-sr-download.png" alt="download">
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
 
 
@@ -1104,7 +1278,7 @@
                 $(bar).on('click', function (e) {
 
 
-                    $(this).parent().addClass("active").siblings().removeClass("active");
+                    $(this).parent().toggleClass("active").siblings().removeClass("active");
 
                     // //getting the sibilibg's cheveron
                     let siblingChev = $(this).parent().siblings().find('.chevron');
