@@ -303,6 +303,11 @@
                 .video .reviews .person {
                     width: 47%;
                 }
+
+                .video .reviews .person .img .person-img {
+                    width: 83px;
+                    height: 83px;
+                }
             }
 
             @media (min-width: 992px) {
@@ -375,6 +380,18 @@
             .future-work .countries .item span {
                 color: #42B39A;
                 font-weight: bold;
+                flex-grow: 1;
+                text-align: left;
+            }
+
+            @media (min-width: 991px) {
+                .future-work .countries .item {
+                    justify-content: center !important;
+                }
+
+                .future-work .countries .item span {
+                    flex-grow: 0;
+                }
             }
 
             .future-work .countries h6 {
@@ -427,7 +444,7 @@
                 box-shadow: 0px 2px 0px 0px #E1E1E1;
                 position: relative;
                 margin: auto;
-                width: 42%;
+                width: 88%;
             }
 
             .certifications .carousel .links ul {
@@ -468,6 +485,10 @@
             }
 
             @media (min-width: 768px) {
+                .certifications .carousel .links {
+                    width: 42%;
+                }
+
                 .certifications .carousel .links li {
                     font-size: 15px;
                 }
@@ -554,7 +575,6 @@
         <div class="position-relative">
             <img class="top-elipse" src="./new-imgs/ellipse_8.png" alt="elipse">
         </div>
-
         <section class="video">
             <div class="container">
                 <div class="row">
@@ -719,7 +739,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="d-block d-lg-none mt-3">
+                        <p class="d-block d-lg-none mt-3 text-center text-lg-left">
                             يهدف دبلوم احتراف الموشن جرافيك الى اعداد مصممين ذو كفاءة وخبرة تساعدهم في رفع مستواهم
                             المهني
                             واكتساب مهارات جديدة تؤهلهم لسوق العمل بدلا من دراسة الدورات المتجزئة سوف تدرس منهج متكامل
@@ -733,8 +753,8 @@
                                 <h5>الجلسات المتاحة</h5>
                                 <form action="POST">
                                     <div class="d-flex ">
-                                        <label for="option-1" class="option">
-                                            <input type="radio" name="sessions" id="option-1" class="option-input"
+                                        <label for="option-a" class="option">
+                                            <input type="radio" name="sessions" id="option-a" class="option-input"
                                                 checked>
                                             <div class="dot"></div>
                                             <div>
@@ -744,8 +764,8 @@
                                             </div>
                                         </label>
 
-                                        <label for="option-2" class="option">
-                                            <input type="radio" name="sessions" id="option-2" class="option-input">
+                                        <label for="option-b" class="option">
+                                            <input type="radio" name="sessions" id="option-b" class="option-input">
                                             <div class="dot"></div>
                                             <div>
                                                 <p>تبدا في 29 ابريل</p>
@@ -765,7 +785,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="reviews d-flex justify-content-between">
+                        <div class="reviews d-flex justify-content-between mt-4 mt-lg-0">
                             <div class="person mt-3">
                                 <div class=" wrapper d-flex  ">
                                     <div class="img mr-0 mr-md-3 mb-3 mb-md-0 mt-md-0 mt-4"><img class=" person-img"
@@ -779,7 +799,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="mt-3">
+                                <p class="mt-3  text-center text-lg-left">
                                     يهدف دبلوم احتراف الموشن جرافيك الى اعداد مصممين ذو كفاءة وخبرة تساعدهم في رفع
                                     مستواهم المهني واكتساب مهارات جديدة
                                     تؤهلهم لسوق العمل بدلا من دراسة الدورات المتجزئة
@@ -807,7 +827,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <p class="mt-3">
+                                <p class="mt-3  text-center text-lg-left">
                                     يهدف دبلوم احتراف الموشن جرافيك الى اعداد مصممين ذو كفاءة وخبرة تساعدهم في رفع
                                     مستواهم المهني واكتساب مهارات جديدة
                                     تؤهلهم لسوق العمل بدلا من دراسة الدورات المتجزئة
@@ -918,7 +938,8 @@
         <section class="future-work ">
             <div class="text-center mb-5">
                 <h2 class="h1">مهنة للمستقبل</h2>
-                <p>مهنة مصمم الموشن جرافيك لديها مستقبل قوي في الأيام القادمة وتشهد الدراسات نموا في سوق العمل وازدياد
+                <p class="mx-3">مهنة مصمم الموشن جرافيك لديها مستقبل قوي في الأيام القادمة وتشهد الدراسات نموا في سوق
+                    العمل وازدياد
                     الطلب على أعمال
                     الموشن جرافيك</p>
                 <div class="divider"></div>
@@ -990,7 +1011,8 @@
             </div>
             <div class="text-center mb-0 mb-sm-4">
                 <h2 class="h1">مسابقة أبطال الموشن جرافيك</h2>
-                <p>تنظم كورسنتلي مسابقة ابطال الموشن جرافيك والتي تهدف الي رفع مستوي الابداع و المنافسة لدي المتدربين ،
+                <p class="mx-3">تنظم كورسنتلي مسابقة ابطال الموشن جرافيك والتي تهدف الي رفع مستوي الابداع و المنافسة لدي
+                    المتدربين ،
                     يستطيع كافة
                     المتدربين في الدبلوم من المشاركة في المسابقة
                 </p>
@@ -1141,7 +1163,7 @@
                     <div class="col-12 col-lg-7 d-flex align-items-center  mb-5 mb-lg-0 text-center text ">
                         <div class="wrapper w-100 ">
                             <div class="div ">
-                                <h3 class="mb-3">استثمر في نفسك</h3>
+                                <h3 class="mb-3 font-weight-bold">استثمر في نفسك</h3>
                                 <span class="mr-5 "><strong>1850</strong>ريال سعودي</span>
                                 <span><strong>495</strong>دولار</span>
                             </div>
